@@ -1,0 +1,37 @@
+[
+  {
+    "label": "PONTIFEXX.NL",
+    "accessibleLabel": "Bezoek de website van Pontifexx",
+    "icon": "globe",
+    "url": "https://pontifexx.nl",
+    "enabled": true
+  },
+  {
+    "label": "PONTIFEXXNEDERLAND",
+    "accessibleLabel": "Pontifexx Nederland op LinkedIn",
+    "icon": "linkedin",
+    "url": "https://nl.linkedin.com/company/pontifexx",
+    "enabled": true
+  },
+  {
+    "label": "PONTIFEXXNEDERLAND",
+    "accessibleLabel": "Pontifexx Nederland op Instagram",
+    "icon": "instagram",
+    "url": "https://www.instagram.com/pontifexxnederland/",
+    "enabled": true
+  },
+  {
+    "label": "PONTIFEXX",
+    "accessibleLabel": "Pontifexx op YouTube",
+    "icon": "youtube",
+    "url": "https://www.youtube.com/@Pontifexx",
+    "enabled": true
+  },
+  {
+    "label": "CONTACT ME",
+    "accessibleLabel": "E-mail naar Pontifexx",
+    "icon": "mail",
+    "url": "mailto:info@pontifexx.nl",
+    "enabled": true
+  }
+]
