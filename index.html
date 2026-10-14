@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e5f2ff">
+  <meta name="description" content="Alle belangrijke links van Pontifexx Nederland op één plek.">
+  <title>Pontifexx Nederland | Alle links</title>
+  <style>
+    :root {
+      --navy: #204b78;
+      --navy-deep: #13233f;
+      --blue-pale: #e5f2ff;
+      --paper: #fffdfa;
+      --peach: #dfb49a;
+      --ink: #101114;
+    }
+    * { box-sizing: border-box; }
+    html { min-height: 100%; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--blue-pale);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .hero {
+      position: relative;
+      height: clamp(190px, 27vw, 290px);
+      overflow: hidden;
+      background: linear-gradient(112deg, #b95e3d 0%, #482f46 49%, #120c2a 100%);
+    }
+    .hero-art {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(10,16,36,.06), rgba(13,8,35,.36) 45%, rgba(13,8,35,.9));
+    }
+    .hero-brand {
+      position: absolute;
+      z-index: 1;
+      right: clamp(20px, 5vw, 80px);
+      top: 50%;
+      transform: translateY(-50%);
+      color: #fff;
+      text-align: left;
+      text-shadow: 0 2px 15px rgba(0,0,0,.2);
+    }
+    .hero-brand strong {
+      display: block;
+      font-size: clamp(2.3rem, 7vw, 5rem);
+      font-weight: 750;
+      line-height: .98;
+      letter-spacing: -.055em;
+    }
+    .hero-brand strong span { color: #d7dce4; }
+    .hero-brand small {
+      display: block;
+      margin-top: 10px;
+      font-size: clamp(.68rem, 1.8vw, 1.25rem);
+      font-weight: 700;
+      letter-spacing: .075em;
+    }
+    main {
+      width: min(760px, calc(100% - 32px));
+      margin: 88px auto 46px;
+      position: relative;
+    }
+    .logo-mark {
+      position: absolute;
+      z-index: 2;
+      width: clamp(180px, 34vw, 280px);
+      height: auto;
+      top: -145px;
+      left: 50%;
+      transform: translateX(-50%);
+      filter: drop-shadow(0 2px 0 rgba(255,255,255,.18));
+    }
+    .intro-card {
+      background: var(--paper);
+      border-radius: clamp(36px, 7vw, 76px);
+      text-align: center;
+      padding: 142px clamp(22px, 6vw, 58px) 48px;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5.5vw, 3.6rem);
+      line-height: 1.08;
+      letter-spacing: -.045em;
+      font-weight: 750;
+    }
+    .rule {
+      width: 68px;
+      height: 4px;
+      margin: 24px auto 20px;
+      background: var(--navy);
+    }
+    .welcome {
+      font-size: clamp(1.02rem, 2.4vw, 1.38rem);
+      line-height: 1.55;
+      margin: 0 auto;
+      max-width: 610px;
+    }
+    .welcome p { margin: 0 0 12px; }
+    .welcome .closing { margin-top: 28px; }
+    .links {
+      display: grid;
+      gap: 24px;
+      width: min(580px, 100%);
+      margin: 28px auto 0;
+    }
+    .link-button {
+      display: grid;
+      grid-template-columns: 52px minmax(0, 1fr) 24px;
+      align-items: center;
+      gap: 14px;
+      min-height: 82px;
+      padding: 12px 28px;
+      border-radius: 999px;
+      color: white;
+      background: var(--navy);
+      text-decoration: none;
+      box-shadow: 0 4px 0 rgba(19, 35, 63, .03);
+      transition: transform .18s ease, background-color .18s ease, box-shadow .18s ease;
+    }
+    .link-button:hover, .link-button:focus-visible {
+      background: #173d66;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(20, 49, 83, .16);
+    }
+    .link-button:focus-visible { outline: 3px solid #e0b79d; outline-offset: 4px; }
+    .link-icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+    }
+    .link-icon svg { display: block; width: 100%; height: 100%; }
+    .link-label {
+      min-width: 0;
+      font-size: clamp(.88rem, 2.4vw, 1.45rem);
+      font-weight: 600;
+      letter-spacing: .15em;
+      line-height: 1.25;
+      overflow-wrap: anywhere;
+    }
+    .link-arrow { width: 20px; height: 20px; opacity: .78; }
+    footer {
+      padding: 0 18px 30px;
+      text-align: center;
+      color: #34516e;
+      font-size: .84rem;
+      letter-spacing: .04em;
+    }
+    .loading-note { color: #34516e; text-align: center; padding: 20px; }
+    @media (max-width: 520px) {
+      .hero { height: 205px; }
+      .hero-brand { right: 18px; top: 45%; }
+      .hero-brand strong { font-size: clamp(2.1rem, 10vw, 3.1rem); }
+      .hero-brand small { max-width: 255px; font-size: .65rem; }
+      main { margin-top: 78px; width: calc(100% - 24px); }
+      .logo-mark { top: -103px; width: 190px; }
+      .intro-card { padding: 102px 20px 34px; border-radius: 38px; }
+      .rule { margin-top: 19px; }
+      .welcome { font-size: 1rem; }
+      .links { gap: 16px; margin-top: 24px; }
+      .link-button { min-height: 70px; grid-template-columns: 38px minmax(0, 1fr) 18px; gap: 10px; padding: 10px 18px; }
+      .link-icon { width: 36px; height: 36px; }
+      .link-label { font-size: .83rem; letter-spacing: .12em; }
+      .link-arrow { width: 16px; height: 16px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero" aria-label="Pontifexx industriële banner">
+    <svg class="hero-art" viewBox="0 0 1440 420" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Abstracte industriële installatie">
+      <defs>
+        <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#e17c4c"/>
+          <stop offset=".42" stop-color="#613b4e"/>
+          <stop offset="1" stop-color="#15102e"/>
+        </linearGradient>
+        <linearGradient id="light" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#ffd2a1" stop-opacity=".9"/>
+          <stop offset="1" stop-color="#ffd2a1" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <rect width="1440" height="420" fill="url(#bg)"/>
+      <rect width="580" height="420" fill="url(#light)" opacity=".7"/>
+      <g fill="none" stroke="#f6c49c" stroke-width="12" opacity=".45">
+        <path d="M-20 90 H240 V30 H360 V150 H480 V55 H620 V260 H750"/>
+        <path d="M-20 155 H180 V310 H310 V205 H420 V350 H575"/>
+        <path d="M30 0 V420 M80 0 V420 M130 0 V420 M180 0 V420"/>
+        <path d="M270 0 V420 M320 0 V420 M370 0 V420 M420 0 V420 M470 0 V420"/>
+      </g>
+      <g fill="none" stroke="#d2d8df" stroke-width="5" opacity=".48">
+        <path d="M650 0 V420 M705 0 V420 M760 0 V420 M815 0 V420 M870 0 V420 M925 0 V420 M980 0 V420 M1035 0 V420 M1090 0 V420 M1145 0 V420 M1200 0 V420 M1255 0 V420 M1310 0 V420 M1365 0 V420"/>
+        <path d="M590 50 H1440 M590 115 H1440 M590 180 H1440 M590 245 H1440 M590 310 H1440 M590 375 H1440"/>
+        <path d="M620 420 L850 0 M770 420 L1000 0 M920 420 L1150 0 M1070 420 L1300 0 M1220 420 L1450 0"/>
+      </g>
+      <g fill="#141a2b" opacity=".7">
+        <rect x="30" y="300" width="84" height="120"/><rect x="126" y="260" width="52" height="160"/>
+        <rect x="194" y="325" width="72" height="95"/><rect x="278" y="286" width="58" height="134"/>
+        <rect x="352" y="330" width="92" height="90"/><rect x="465" y="270" width="64" height="150"/>
+      </g>
+      <g fill="none" stroke="#11172b" stroke-width="20" opacity=".7">
+        <path d="M-30 220 H120 Q155 220 155 255 V420"/>
+        <path d="M130 150 H255 Q285 150 285 180 V420"/>
+        <path d="M320 180 H420 Q450 180 450 210 V420"/>
+      </g>
+      <g fill="#11172b" opacity=".68">
+        <path d="M210 420 l12 -80 q12 -16 24 0 l12 80z"/>
+        <circle cx="234" cy="324" r="14"/>
+        <path d="M294 420 l8 -70 q13 -18 26 0 l10 70z"/>
+        <circle cx="315" cy="340" r="13"/>
+        <path d="M372 420 l10 -76 q13 -18 26 0 l12 76z"/>
+        <circle cx="394" cy="333" r="13"/>
+      </g>
+      <rect width="1440" height="420" fill="#11142d" opacity=".15"/>
+    </svg>
+    <div class="hero-brand" aria-label="Pontifexx — Leading Maintenance Tech">
+      <strong>Pontifex<span>x</span></strong>
+      <small>LEADING MAINTENANCE TECH</small>
+    </div>
+  </header>
+
+  <main>
+    <svg class="logo-mark" viewBox="0 0 300 170" aria-hidden="true">
+      <path d="M18 12 L84 85 L18 158 Q10 164 10 151 V19 Q10 6 18 12Z" fill="#204b78"/>
+      <path d="M66 12 L132 85 L66 158 H120 L186 85 L120 12Z" fill="#8da9c3" opacity=".86"/>
+      <path d="M116 12 L182 85 L116 158 H170 L236 85 L170 12Z" fill="#dfb49a"/>
+      <path d="M204 12 L270 85 L204 158 H252 L294 99 Q304 85 294 71 L252 12Z" fill="#c4a08b" opacity=".4"/>
+    </svg>
+
+    <section class="intro-card" aria-labelledby="page-title">
+      <h1 id="page-title">Pontifexx Nederland</h1>
+      <div class="rule" aria-hidden="true"></div>
+      <div class="welcome" id="welcome">
+        <p>Welkom bij Pontifexx!</p>
+        <p>Bij Pontifexx ontdek je hoe technologie, innovatie en maintenance samenkomen. Een stage, afstudeeropdracht tot een start van je carrière: er liggen volop kansen om jezelf te ontwikkelen.</p>
+        <p class="closing">Ontdek wat wij voor jou kunnen betekenen!</p>
+      </div>
+    </section>
+
+    <nav class="links" id="links" aria-label="Links van Pontifexx">
+      <p class="loading-note">De links worden geladen…</p>
+    </nav>
+  </main>
+
+  <footer id="footer">Pontifexx Nederland · Leading Maintenance Tech</footer>
+
+  <script>
+    const iconPaths = {
+      globe: '<circle cx="24" cy="24" r="19"/><path d="M5 24h38M24 5c6 6 9 12 9 19s-3 13-9 19c-6-6-9-12-9-19s3-13 9-19zM9 12h30M9 36h30"/>',
+      linkedin: '<rect x="4" y="4" width="40" height="40" rx="5" fill="white" stroke="white"/><path d="M13 20h6v18h-6zM16 17a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM24 20h6v2.5c1.3-2 3-3 5.4-3 5.2 0 6.6 3.4 6.6 8.2V38h-6v-9.1c0-2.2-.1-5-3.2-5s-3.7 2.4-3.7 4.8V38h-6z" fill="#204b78" stroke="none"/>',
+      instagram: '<rect x="5" y="5" width="38" height="38" rx="10"/><circle cx="24" cy="24" r="9"/><circle cx="35" cy="13" r="2" fill="white" stroke="none"/>',
+      youtube: '<rect x="3" y="9" width="42" height="30" rx="8" fill="white" stroke="white"/><path d="M20 16l13 8-13 8z" fill="#204b78" stroke="none"/>',
+      mail: '<rect x="3" y="8" width="42" height="32" rx="2"/><path d="M4 10l20 16 20-16M4 38l14-14M44 38L30 24"/>'
+    };
+    function makeIcon(name) {
+      const path = iconPaths[name] || iconPaths.globe;
+      return '<svg viewBox="0 0 48 48" role="img" aria-hidden="true" fill="none" stroke="white" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">' + path + '</svg>';
+    }
+    async function loadPage() {
+      try {
+        const [contentResponse, linksResponse] = await Promise.all([
+          fetch('./data/content.json'),
+          fetch('./data/links.json')
+        ]);
+        if (!contentResponse.ok || !linksResponse.ok) throw new Error('De inhoud kon niet worden geladen.');
+        const content = await contentResponse.json();
+        const links = await linksResponse.json();
+
+        if (content.title) document.getElementById('page-title').textContent = content.title;
+        if (content.welcome || content.description || content.closing) {
+          const welcome = document.getElementById('welcome');
+          welcome.replaceChildren();
+          if (content.welcome) {
+            const p = document.createElement('p');
+            p.textContent = content.welcome;
+            welcome.appendChild(p);
+          }
+          if (content.description) {
+            const p = document.createElement('p');
+            p.textContent = content.description;
+            welcome.appendChild(p);
+          }
+          if (content.closing) {
+            const p = document.createElement('p');
+            p.className = 'closing';
+            p.textContent = content.closing;
+            welcome.appendChild(p);
+          }
+        }
+        if (content.footer) document.getElementById('footer').textContent = content.footer;
+
+        const list = document.getElementById('links');
+        list.replaceChildren();
+        links.filter(item => item.enabled !== false).forEach(item => {
+          const a = document.createElement('a');
+          a.className = 'link-button';
+          a.href = item.url;
+          a.setAttribute('aria-label', item.accessibleLabel || item.label);
+          if (item.url.startsWith('http')) {
+            a.target = '_blank';
+            a.rel = 'noopener noreferrer';
+          }
+          const icon = document.createElement('span');
+          icon.className = 'link-icon';
+          icon.innerHTML = makeIcon(item.icon);
+          const label = document.createElement('span');
+          label.className = 'link-label';
+          label.textContent = item.label;
+          const arrow = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+          arrow.setAttribute('viewBox', '0 0 24 24');
+          arrow.setAttribute('class', 'link-arrow');
+          arrow.setAttribute('aria-hidden', 'true');
+          arrow.innerHTML = '<path d="M5 12h13M12 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>';
+          a.append(icon, label, arrow);
+          list.appendChild(a);
+        });
+      } catch (error) {
+        const list = document.getElementById('links');
+        list.innerHTML = '<p class="loading-note">De linkknoppen konden niet worden geladen. Probeer de pagina later opnieuw.</p>';
+      }
+    }
+    loadPage();
+  </script>
+</body>
+</html>
